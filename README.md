@@ -71,9 +71,9 @@ Headers (ללא שינוי מהקוד הנתון, מתועדים ב-`RequestsCon
 
 ## Architecture & Cloud (חלק ב׳ + ג׳)
 
-[Requests Platform Blueprint](https://claude.ai/artifact/MiGbToH8i3FY1UdVZtfp42) — עמוד אחד שמכסה את שני החלקים: טופולוגיית השירותים, בעלות על נתונים, תקשורת sync מול async, תרחיש ההתראה האמינה (Outbox + תור עמיד + idempotency + DLQ), מסלול המעבר, וסקיצת הפריסה בענן על Azure (Compute/DB/Messaging/Monitoring/Scaling).
+https://claude.ai/artifact/MiGbToH8i3FY1UdVZtfp42
 
-עותק של אותו עמוד קיים גם בריפו עצמו ב-[`docs/architecture.html`](docs/architecture.html) (לפתוח ישירות בדפדפן), למקרה שהלינק החי לא משותף/נגיש. הלינק החי הוא אותו תוכן, חי — **יש לשתף אותו מתפריט השיתוף בעמוד** לפני ההגשה אם רוצים שהבודק ייפתח אותו ישירות, כי artifacts הם פרטיים כברירת מחדל.
+[Requests Platform Blueprint](https://claude.ai/artifact/MiGbToH8i3FY1UdVZtfp42) — עמוד אחד שמכסה את שני החלקים: טופולוגיית השירותים, בעלות על נתונים, תקשורת sync מול async, תרחיש ההתראה האמינה (Outbox + תור עמיד + idempotency + DLQ), מסלול המעבר, וסקיצת הפריסה בענן על Azure (Compute/DB/Messaging/Monitoring/Scaling).
 
 ## הנחות שביצעתי
 
@@ -93,3 +93,5 @@ Headers (ללא שינוי מהקוד הנתון, מתועדים ב-`RequestsCon
 ---
 
 תודה רבה על ההזדמנות.
+אשמח להיות בקשר
+הדסה ויסבקר-גלוסקינוס
