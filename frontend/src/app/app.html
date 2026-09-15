@@ -1,0 +1,30 @@
+<header class="app-header">
+  <h1>Requests</h1>
+
+  <div
+    class="current-user"
+    title="Simulates the logged-in user - the backend enforces authorization based on these headers."
+  >
+    <label>
+      User ID
+      <input
+        type="number"
+        min="1"
+        [value]="currentUser.userId()"
+        (change)="onUserIdChange($event)"
+      />
+    </label>
+    <label class="checkbox">
+      <input
+        type="checkbox"
+        [checked]="currentUser.isAdministrator()"
+        (change)="onAdminToggle($event)"
+      />
+      Administrator
+    </label>
+  </div>
+</header>
+
+<main>
+  <app-requests-search-page />
+</main>

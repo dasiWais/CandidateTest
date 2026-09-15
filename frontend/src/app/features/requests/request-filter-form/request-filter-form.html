@@ -1,0 +1,75 @@
+<form class="filter-form" (submit)="onSubmit($event)">
+  <div class="field">
+    <label for="requestNumber">Request number</label>
+    <input
+      id="requestNumber"
+      type="text"
+      placeholder="e.g. REQ-000123"
+      [value]="requestNumber()"
+      (input)="onRequestNumberInput($event)"
+      [class.invalid]="requestNumberError()"
+      [attr.aria-invalid]="requestNumberError() ? true : null"
+      aria-describedby="requestNumberError"
+    />
+    @if (requestNumberError()) {
+      <p id="requestNumberError" class="field-error" role="alert">{{ requestNumberError() }}</p>
+    }
+  </div>
+
+  <fieldset class="field">
+    <legend>Status</legend>
+    @for (status of statusOptions; track status) {
+      <label class="checkbox">
+        <input
+          type="checkbox"
+          [checked]="selectedStatuses().includes(status)"
+          (change)="onStatusChange(status, $event)"
+        />
+        {{ statusLabels[status] }}
+      </label>
+    }
+  </fieldset>
+
+  <fieldset class="field">
+    <legend>Type</legend>
+    @for (type of typeOptions; track type) {
+      <label class="checkbox">
+        <input
+          type="checkbox"
+          [checked]="selectedTypes().includes(type)"
+          (change)="onTypeChange(type, $event)"
+        />
+        {{ typeLabels[type] }}
+      </label>
+    }
+  </fieldset>
+
+  <div class="field">
+    <label for="createdFrom">Created from</label>
+    <input
+      id="createdFrom"
+      type="date"
+      [value]="createdFrom() ?? ''"
+      (input)="onCreatedFromInput($event)"
+    />
+  </div>
+
+  <div class="field">
+    <label for="createdTo">Created to</label>
+    <input
+      id="createdTo"
+      type="date"
+      [value]="createdTo() ?? ''"
+      (input)="onCreatedToInput($event)"
+    />
+  </div>
+
+  @if (dateRangeError()) {
+    <p class="field-error" role="alert">{{ dateRangeError() }}</p>
+  }
+
+  <div class="actions">
+    <button type="submit" [disabled]="!!requestNumberError()">Search</button>
+    <button type="button" (click)="onClear()">Clear</button>
+  </div>
+</form>

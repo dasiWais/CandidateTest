@@ -1,0 +1,11 @@
+<app-request-filter-form (search)="onFiltersSubmitted($event)" />
+
+<app-request-table
+  [result]="result()"
+  [loading]="loading()"
+  [error]="errorMessage()"
+  [sortBy]="sortBy()"
+  [sortDir]="sortDir()"
+  (sortChange)="onSortChange($event)"
+  (pageChange)="onPageChange($event)"
+/>

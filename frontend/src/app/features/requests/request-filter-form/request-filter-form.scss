@@ -1,0 +1,93 @@
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  align-items: flex-start;
+  padding: 1rem;
+  border: 1px solid #d8dde3;
+  border-radius: 8px;
+  background: #fafbfc;
+  margin-bottom: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 9rem;
+}
+
+legend {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #33393f;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 400;
+}
+
+input[type='text'],
+input[type='date'] {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #c3c9d1;
+  border-radius: 4px;
+  font-size: 0.9rem;
+
+  &.invalid {
+    border-color: #b3261e;
+    background: #fdecea;
+
+    &:focus {
+      outline-color: #b3261e;
+    }
+  }
+}
+
+.field-error {
+  color: #b3261e;
+  font-size: 0.85rem;
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid #c3c9d1;
+  background: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+button[type='submit'] {
+  background: #2f6fed;
+  border-color: #2f6fed;
+  color: white;
+  font-weight: 600;
+
+  &:disabled {
+    background: #a9b8d6;
+    border-color: #a9b8d6;
+    cursor: not-allowed;
+  }
+}
